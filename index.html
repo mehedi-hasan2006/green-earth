@@ -1,94 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Earth || Mehedi Hasan</title>
-    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
 
     <!-- Tailwind + Daisy UI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <!-- Font Awesome icon CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Inter Font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- External CSS File  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
-
-<body class="bg-[#f0fdf4]">
-
-<!-- NavBar-section -->
- <header class="navbar bg-base-100 shadow-sm bg-green-500">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+  <body class="bg-[#f0fdf4]">
+    <!-- NavBar-section -->
+    <header class="navbar bg-base-100 shadow-sm bg-green-500">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-green-500"
+          >
+            <li><a>About</a></li>
+            <li>
+              <a>Gallery</a>
+            </li>
+            <li><a>Plant a Tree</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl text-white hover:bg-[#22C55E]"
+          >Green Earth</a
+        >
       </div>
-      <ul
-        tabindex="-1"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-green-500 ">
-        <li><a>About</a></li>
-        <li>
-          <a>Gallery</a>
-        </li>
-        <li><a>Plant a Tree</a></li>
-      </ul>
-    </div>
-    <a class="btn btn-ghost text-xl text-white hover:bg-[#22C55E]">Green Earth</a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 text-white font-semibold">
-      <li><a>About</a></li>
-      <li>
-          <summary>Gallery</summary>
-      </li>
-      <li><a>Plant a Tree</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <a class="btn rounded-full text-green-800 bg-yellow-400">Plant a Tree</a>
-  </div>
-</header>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 text-white font-semibold">
+          <li><a>About</a></li>
+          <li>
+            <summary>Gallery</summary>
+          </li>
+          <li><a>Plant a Tree</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn rounded-full text-green-800 bg-yellow-400"
+          >Plant a Tree</a
+        >
+      </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section
+      class="relative flex items-center justify-center bg-[#CFF0DC] overflow-hidden py-16"
+    >
+      <img
+        src="assets/hero-leaf1.png"
+        class="absolute left-0 bottom-0 w-40 md:w-72 lg:w-96 opacity-90"
+      />
+
+      <img
+        src="assets/hero-leaf2.png"
+        class="absolute right-0 bottom-0 w-40 md:w-72 lg:w-96 opacity-90"
+      />
+
+      <div
+        class="text-center flex flex-col items-center gap-4 px-4 relative z-10 max-w-xl"
+      >
+        <h1 class="text-2xl md:text-4xl font-bold text-gray-800">
+          Plant a Tree, Grow a Future
+        </h1>
+
+        <p class="text-gray-600 text-sm md:text-lg">
+          Join our mission to plant 1 million trees and make the Earth greener
+          for future generations.
+        </p>
+
+        <button
+          class="bg-yellow-400 text-green-900 px-6 py-2 rounded-full hover:bg-green-300 transition duration-300"
+        >
+          Get Involved
+        </button>
+      </div>
+    </section>
 
     <h2 class="text-center font-semibold text-2xl">Choose Your Trees</h2>
 
-    <div class="grid grid-cols-12 gap-5 w-11/12 mx-auto ">
-        <!-- catagories -->
+    <div class="grid grid-cols-12 gap-5 w-11/12 mx-auto">
+      <!-- catagories -->
 
-        <div id="categories" class="col-span-2 border-red-500">
-            <h2 class="font-bold text-[24px]">Catagories</h2>
+      <div id="categories" class="col-span-2 border-red-500">
+        <h2 class="font-bold text-[24px]">Catagories</h2>
 
-            <button id="allBtn" onclick="allCategoryBtn(allBtn)"
-                class="btn btn-success w-full mb-3 categoryBtn">All</button>
+        <button
+          id="allBtn"
+          onclick="allCategoryBtn(allBtn)"
+          class="btn btn-success w-full mb-3 categoryBtn"
+        >
+          All
+        </button>
 
-            <div id="categoriesContainer" class="space-y-3">
-                <!-- category display here from api -->
-            </div>
+        <div id="categoriesContainer" class="space-y-3">
+          <!-- category display here from api -->
         </div>
+      </div>
 
-        <!-- item cards -->
-        <div class="col-span-8   border-green-500">
+      <!-- item cards -->
+      <div class="col-span-8 border-green-500">
+        <div id="itemCardsContainer" class="grid grid-cols-3 gap-5">
+          <!-- item cards display here from api -->
 
-            <div id="itemCardsContainer" class="grid grid-cols-3 gap-5">
-
-                <!-- item cards display here from api -->
-
-                <!-- <div class="bg-white rounded-lg p-5 space-y-2">
+          <!-- <div class="bg-white rounded-lg p-5 space-y-2">
                     <img src="" alt="" class="rounded-md">
                     <h2 class="font-semibold">Title</h2>
                     <p class="text-[12px] opacity-80 text-[#71717A]">Lorem ipsum dolor sit amet.</p>
@@ -99,59 +163,54 @@
                     </div>
                     <button class="btn bg-[#15803D] text-white rounded-full w-full">Add to Cart</button>
                 </div> -->
+        </div>
+      </div>
 
+      <!-- buy card  -->
+      <div class="col-span-2 border-violet-600 bg-white rounded-md p-5">
+        <h2 class="font-semibold text-[26px]">Your Cart</h2>
+
+        <!-- cart details  -->
+        <div id="cartContainer">
+          <!-- Cart information display here  -->
+
+          <div
+            class="flex items-center justify-between rounded-md bg-[#f0fdf4] p-4"
+          >
+            <div class="">
+              <h2 class="font-semibold">Mango Tree</h2>
+              <p class="text-[#94a0a1]">
+                ৳ 500 <i class="fa-solid fa-xmark"></i>
+                <span class="count"> 1 </span>
+              </p>
             </div>
+            <div>
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
         </div>
 
+        <!-- total amount section  -->
+        <div id="totalAmount" class="pt-2">
+          <hr class="opacity-50" />
 
-        <!-- buy card  -->
-        <div class="col-span-2  border-violet-600 bg-white rounded-md p-5">
-
-            <h2 class="font-semibold text-[26px]">Your Cart</h2>
-
-            <!-- cart details  -->
-            <div id="cartContainer">
-
-                <!-- Cart information display here  -->
-
-                <div class="flex items-center justify-between rounded-md bg-[#f0fdf4] p-4"> 
-                    <div class="">
-                        <h2 class="font-semibold">Mango Tree</h2>
-                        <p class="text-[#94a0a1]">৳ 500 <i class="fa-solid fa-xmark"></i> <span class="count"> 1 </span>
-                        </p>
-
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-xmark"></i>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- total amount section  -->
-            <div id="totalAmount" class="pt-2">
-                <hr class="opacity-50">
-
-                <div class="flex justify-between items-center font-bold ">
-                    <p class="pt-1">Total: </p>
-                    <p class="pt-1"> ৳ <span class="totalTaka"> 500 </span></p>
-                </div>
-            </div>
-
-            <!-- no item found  -->
-            <div class="cartNoItem">
-                <img src="./assets/cart-no-item.png" alt="">
-            </div>
-
+          <div class="flex justify-between items-center font-bold">
+            <p class="pt-1">Total:</p>
+            <p class="pt-1">৳ <span class="totalTaka"> 500 </span></p>
+          </div>
         </div>
+
+        <!-- no item found  -->
+        <div class="cartNoItem">
+          <img src="./assets/cart-no-item.png" alt="" />
+        </div>
+      </div>
     </div>
-
 
 
 
 
     <!-- JS  -->
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
