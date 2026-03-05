@@ -1,3 +1,8 @@
+const removeActiveClass = () => {
+  let categoryBtn = document.querySelectorAll(".categoryBtn");
+  categoryBtn.forEach((btn) => btn.classList.remove("active"));
+};
+
 const fetchCategories = () => {
   fetch("https://openapi.programming-hero.com/api/categories")
     .then((res) => res.json())
@@ -12,7 +17,7 @@ const displayCategories = (categories) => {
   categories.forEach((catagory) => {
     let createCategoryElement = document.createElement("div");
     createCategoryElement.innerHTML = `
-        <button class="btn btn-success btn-outline w-full"> ${catagory.category_name} </button>
+        <button id="categoryBtn-${catagory.id}" onclick="getCategoriesByPlants(${catagory.id})"  class="btn btn-success btn-outline w-full categoryBtn"> ${catagory.category_name} </button>
     `;
     categoriesContainer.appendChild(createCategoryElement);
   });
@@ -29,7 +34,6 @@ fetchAllPlants();
 
 const displayAllPlants = (plants) => {
   let itemCardsContainer = document.getElementById("itemCardsContainer");
-  console.log(itemCardsContainer);
   itemCardsContainer.innerHTML = "";
 
   plants.forEach((plant) => {
@@ -50,4 +54,26 @@ const displayAllPlants = (plants) => {
     `;
     itemCardsContainer.appendChild(plantCard);
   });
+};
+
+const getCategoriesByPlants = (id) => {
+  const url = `https://openapi.programming-hero.com/api/category/${id}`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      removeActiveClass();
+      let clickBtn = document.getElementById(`categoryBtn-${id}`);
+      clickBtn.classList.add("active");
+
+      let allBtn = document.getElementById("allBtn");
+      allBtn.classList.add("btn-outline");
+
+      displayAllPlants(data.plants);
+    });
+};
+
+const allCategoryBtn = (allCategoryBtn) => {
+  fetchAllPlants();
+  allCategoryBtn.classList.remove("btn-outline");
+  removeActiveClass();
 };

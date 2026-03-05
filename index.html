@@ -38,7 +38,8 @@
 
         <div id="categories" class="col-span-2 border-red-500">
             <h2 class="font-bold text-[24px]">Catagories</h2>
-            <button class="btn btn-success w-full mb-3">All</button>
+            
+            <button id="allBtn" onclick="allCategoryBtn(allBtn)" class="btn btn-success w-full mb-3 categoryBtn">All</button>
 
             <div id="categoriesContainer" class="space-y-3">
                 <!-- category display here from api -->
@@ -51,7 +52,7 @@
             <div id="itemCardsContainer" class="grid grid-cols-3 gap-5">
 
                 <!-- item cards display here from api -->
-                
+
                 <!-- <div class="bg-white rounded-lg p-5 space-y-2">
                     <img src="" alt="" class="rounded-md">
                     <h2 class="font-semibold">Title</h2>
