@@ -31,6 +31,40 @@
 
 <body class="bg-[#f0fdf4]">
 
+<!-- header-section -->
+ <header class="navbar bg-base-100 shadow-sm bg-green-500">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabindex="-1"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-green-500 ">
+        <li><a>About</a></li>
+        <li>
+          <a>Gallery</a>
+        </li>
+        <li><a>Plant a Tree</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost text-xl text-white hover:bg-[#22C55E]">Green Earth</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 text-white font-semibold">
+      <li><a>About</a></li>
+      <li>
+          <summary>Gallery</summary>
+      </li>
+      <li><a>Plant a Tree</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <a class="btn rounded-full text-green-800 bg-yellow-400">Plant a Tree</a>
+  </div>
+</header>
+
+
     <h2 class="text-center font-semibold text-2xl">Choose Your Trees</h2>
 
     <div class="grid grid-cols-12 gap-5 w-11/12 mx-auto ">
