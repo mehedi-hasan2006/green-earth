@@ -77,3 +77,10 @@ const allCategoryBtn = (allCategoryBtn) => {
   allCategoryBtn.classList.remove("btn-outline");
   removeActiveClass();
 };
+
+// display cart content 
+const displayCart = () => {
+  let cartContainer = document.getElementById("cartContainer");
+  cartContainer.innerHTML = "";
+};
+// displayCart();
