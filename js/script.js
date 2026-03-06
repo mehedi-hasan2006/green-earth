@@ -49,7 +49,7 @@ const displayAllPlants = (plants) => {
                 <p class="btn  rounded-full bg-[#DCFCE7] text-[#15803D]"> ${plant.category}</p>
                 <p class="font-semibold">৳ ${plant.price}</p>
             </div>
-            <button class="btn bg-[#15803D] text-white rounded-full w-full">Add to Cart</button>
+            <button onclick="addToCart(${plant.id}, '${plant.name}', ${plant.price})" class="btn bg-[#15803D] text-white rounded-full w-full">Add to Cart</button>
         </div>
     `;
     itemCardsContainer.appendChild(plantCard);
@@ -78,9 +78,70 @@ const allCategoryBtn = (allCategoryBtn) => {
   removeActiveClass();
 };
 
-// display cart content 
+let cart = [];
+const addToCart = (id, name, price) => {
+  const existingItem = cart.find((item) => item.id === id);
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({
+      id,
+      name,
+      price,
+      quantity: 1,
+    });
+  }
+
+  let totalAmountContainer = document.getElementById("totalAmount");
+  totalAmountContainer.classList.remove("hidden");
+
+  cartNoItem.classList.add("hidden");
+
+  displayCart();
+};
+
+// display cart content
 const displayCart = () => {
   let cartContainer = document.getElementById("cartContainer");
   cartContainer.innerHTML = "";
+  let totalSum = 0;
+  cart.forEach((item) => {
+    totalSum += item.price * item.quantity;
+    let cardDiv = document.createElement("div");
+    cardDiv.innerHTML = `
+      <div class=" rounded-md bg-[#f0fdf4] p-4">
+                    <div class="flex justify-between">
+                        <h2 class="font-semibold"> ${item.name}</h2>
+                        <div onclick="removeFromCart(${item.id})" class="cursor-pointer">
+                          <p  > X </p>
+                        </div>
+                    </div>  
+                       <div class="flex justify-between"> 
+                          <p class="text-[#94a0a1]">৳ ${item.price} X ${item.quantity}</p>
+                          <p class ="font-semibold text-[16px]">৳ ${item.price * item.quantity} </p>
+                        </div>           
+      </div>
+      
+    `;
+    cartContainer.appendChild(cardDiv);
+  });
+
+  let totalTaka = document.getElementById("totalTaka");
+  totalTaka.innerText = totalSum;
 };
-// displayCart();
+displayCart();
+
+const removeFromCart = (id) => {
+  let removeItem = cart.filter((item) => item.id != id);
+  cart = removeItem;
+
+  displayCart();
+};
+
+let cartNoItem = document.getElementById("cartNoItem");
+
+if (cart.length == 0) {
+  cartNoItem.classList.remove("hidden");
+} else {
+  cartNoItem.classList.add("hidden");
+}

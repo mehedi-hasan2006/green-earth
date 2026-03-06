@@ -76,48 +76,36 @@
             <h2 class="font-semibold text-[26px]">Your Cart</h2>
 
             <!-- cart details  -->
-            <div id="cartContainer">
+            <div id="cartContainer" class="space-y-4">
 
                 <!-- Cart information display here  -->
 
-                <div class="flex items-center justify-between rounded-md bg-[#f0fdf4] p-4"> 
-                    <div class="">
-                        <h2 class="font-semibold">Mango Tree</h2>
-                        <p class="text-[#94a0a1]">৳ 500 <i class="fa-solid fa-xmark"></i> <span class="count"> 1 </span>
-                        </p>
-
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-xmark"></i>
-                    </div>
-                </div>
-
             </div>
 
+
             <!-- total amount section  -->
-            <div id="totalAmount" class="pt-2">
+            <div id="totalAmount" class="pt-2 hidden">
                 <hr class="opacity-50">
 
                 <div class="flex justify-between items-center font-bold ">
                     <p class="pt-1">Total: </p>
-                    <p class="pt-1"> ৳ <span class="totalTaka"> 500 </span></p>
+                    <p class="pt-1"> ৳ <span id="totalTaka"> </span></p>
                 </div>
             </div>
 
             <!-- no item found  -->
-            <div class="cartNoItem">
+            <div id="cartNoItem" class="hidden">
                 <img src="./assets/cart-no-item.png" alt="">
             </div>
 
         </div>
-    </div>
 
 
 
 
 
-    <!-- JS  -->
-    <script src="./js/script.js"></script>
+        <!-- JS  -->
+        <script src="./js/script.js"></script>
 </body>
 
 </html>
